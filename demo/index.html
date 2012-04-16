@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Plugin jQuery</title>
+    <link href="style.css" media="all" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="../jquery.touch-multiselect.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('select').touchMultiSelect();
+      });
+    </script>
+  </head>
+  <body>
+    <form action="index.html" method="get">
+      <div>
+        <select name="languages[]" multiple="multiple">
+          <option value="php">PHP</option>
+          <option value="ror" selected="selected">Ruby on Rails</option>
+          <option value="java">Java</option>
+          <option value="js" selected="selected">Javascript</option>
+          <option value="c">C</option>
+        </select>
+      </div>
+      <div class="actions">
+        <input type="submit" />
+      </div>
+    </form>
+  </body>
+</html>
