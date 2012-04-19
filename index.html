@@ -6,7 +6,15 @@
     <title>jquery-touch-multiselect by Ingolmo</title>
     
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/jquery.touch-multiselect.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="javascripts/jquery.touch-multiselect.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('select').touchMultiSelect();
+      });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,7 +35,19 @@
       <section>
         <p>This jQuery plugin is able to transform a classic <code>&lt;select multiple="multiple"&gt;</code> input field of a form into a nice foldable list with easily selected elements, even for a touch device like a smartphone.</p>
 
-<p>You can look at the demo folder to watch a working use of this plugin.</p>
+<h2>Demo</h2>
+
+<form action="index.html" method="get">
+  <div>
+    <select name="languages[]" multiple="multiple">
+      <option value="php">PHP</option>
+      <option value="ror" selected="selected">Ruby on Rails</option>
+      <option value="java">Java</option>
+      <option value="js" selected="selected">Javascript</option>
+      <option value="c">C</option>
+    </select>
+  </div>
+</form>
 
 <h2>Usage</h2>
 
