@@ -8,17 +8,20 @@ Usage
 
 You can simply use this plugin by create a standard ```<select multiple="multiple">``` list :
 
-    <select multiple="multiple">
-      <option value="1" selected="selected">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3" selected="selected">Java</option>
-      <option value="4">Option 4</option>
-    </select>
-    
+```html
+<select multiple="multiple">
+  <option value="1" selected="selected">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3" selected="selected">Java</option>
+  <option value="4">Option 4</option>
+</select>
+```
+
 Then in a javascript script, you can simply use this function :
 
-    $('select').touchMultiSelect();
-    
+```javascript
+$('select').touchMultiSelect();
+```
 
 
 Parameters
@@ -45,7 +48,9 @@ _default value : false_
 
 ### Example
 
-    $('select').touchMultiSelect({
-      noneButtonPresent: false,
-      permitNoSelectedButton: true
-    });
+```javascript
+$('select').touchMultiSelect({
+  noneButtonPresent: false,
+  permitNoSelectedButton: true
+});
+```
