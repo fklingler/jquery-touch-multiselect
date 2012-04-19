@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>jquery-touch-multiselect by Ingolmo</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>jquery-touch-multiselect</h1>
+        <p>jQuery plugin to have a touch-fitted multi select input field.</p>
+        <p class="view"><a href="https://github.com/Ingolmo/jquery-touch-multiselect">View the Project on GitHub <small>Ingolmo/jquery-touch-multiselect</small></a></p>
+        <ul>
+          <li><a href="https://github.com/Ingolmo/jquery-touch-multiselect/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Ingolmo/jquery-touch-multiselect/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Ingolmo/jquery-touch-multiselect">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>This jQuery plugin is able to transform a classic <code>&lt;select multiple="multiple"&gt;</code> input field of a form into a nice foldable list with easily selected elements, even for a touch device like a smartphone.</p>
+
+<p>You can look at the demo folder to watch a working use of this plugin.</p>
+
+<h2>Usage</h2>
+
+<p>You can simply use this plugin by create a standard <code>&lt;select multiple="multiple"&gt;</code> list :</p>
+
+<pre><code>&lt;select multiple="multiple"&gt;
+  &lt;option value="1" selected="selected"&gt;Option 1&lt;/option&gt;
+  &lt;option value="2"&gt;Option 2&lt;/option&gt;
+  &lt;option value="3" selected="selected"&gt;Java&lt;/option&gt;
+  &lt;option value="4"&gt;Option 4&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<p>Then in a javascript script, you can simply use this function :</p>
+
+<pre><code>$('select').touchMultiSelect();
+</code></pre>
+
+<h2>Parameters</h2>
+
+<p>Some parameters can be passed to the function to customize the behavior of the plugin :</p>
+
+<ul>
+<li><p><strong>noneButtonPresent</strong><br>
+Determines if a 'none' button must be included in the list<br><em>default value : true</em></p></li>
+<li><p><strong>noneButtonText</strong><br>
+Determines the text of the 'none' button if there is one<br><em>default value : 'None'</em></p></li>
+<li><p><strong>noneButtonAtBeginning</strong><br>
+Determines if the 'none' button must be prepended (true) or appended (false) to the list<br><em>default value : true</em></p></li>
+<li><p><strong>permitNoSelectedButton</strong><br>
+If there is no 'none' button, determines if we can deselect an option if there is no other selected option<br><em>default value : false</em></p></li>
+</ul><h3>Example</h3>
+
+<pre><code>$('select').touchMultiSelect({
+  noneButtonPresent: false,
+  permitNoSelectedButton: true
+});
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Ingolmo">Ingolmo</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
