@@ -1,4 +1,4 @@
-<!doctype html>
+§¡<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -53,18 +53,22 @@
 
 <p>You can simply use this plugin by create a standard <code>&lt;select multiple="multiple"&gt;</code> list :</p>
 
-<pre><code>&lt;select multiple="multiple"&gt;
-  &lt;option value="1" selected="selected"&gt;Option 1&lt;/option&gt;
-  &lt;option value="2"&gt;Option 2&lt;/option&gt;
-  &lt;option value="3" selected="selected"&gt;Java&lt;/option&gt;
-  &lt;option value="4"&gt;Option 4&lt;/option&gt;
-&lt;/select&gt;
-</code></pre>
+<div class="highlight">
+<pre><span class="nt">&lt;select</span> <span class="na">multiple=</span><span class="s">"multiple"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Option 1<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Option 2<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Java<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Option 4<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span>
+</pre>
+</div>
 
 <p>Then in a javascript script, you can simply use this function :</p>
 
-<pre><code>$('select').touchMultiSelect();
-</code></pre>
+<div class="highlight">
+<pre><span class="nx">$</span><span class="p">(</span><span class="s1">'select'</span><span class="p">).</span><span class="nx">touchMultiSelect</span><span class="p">();</span>
+</pre>
+</div>
 
 <h2>Parameters</h2>
 
@@ -81,11 +85,13 @@ Determines if the 'none' button must be prepended (true) or appended (false) to 
 If there is no 'none' button, determines if we can deselect an option if there is no other selected option<br><em>default value : false</em></p></li>
 </ul><h3>Example</h3>
 
-<pre><code>$('select').touchMultiSelect({
-  noneButtonPresent: false,
-  permitNoSelectedButton: true
-});
-</code></pre>
+<div class="highlight">
+<pre><span class="nx">$</span><span class="p">(</span><span class="s1">'select'</span><span class="p">).</span><span class="nx">touchMultiSelect</span><span class="p">({</span>
+  <span class="nx">noneButtonPresent</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">permitNoSelectedButton</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+</pre>
+</div>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/Ingolmo">Ingolmo</a></p>
