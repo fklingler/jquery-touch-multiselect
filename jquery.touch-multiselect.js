@@ -33,7 +33,7 @@
 
     /*
      * Function that updates the binded <option> to the lis passed in parameters to add or remove
-     * the selected attribute. It also trigger the change event on the option.
+     * the selected attribute. It also triggers the change event on the option.
      */
     var updateSelectOption = function(lis) {
       lis.each(function() {
@@ -92,7 +92,7 @@
     };
 
     /*
-     * <ul> click handler, which manage opening and closing the list
+     * <ul> click handler, which manages opening and closing the list
      */
     var ulClickHandler = function(event) {
       _ul.toggleClass('opened');

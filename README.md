@@ -6,7 +6,7 @@ You can look at the demo folder to watch a working use of this plugin.
 Usage
 -----
 
-You can simply use this plugin by create a standard ```<select multiple="multiple">``` list :
+You can simply use this plugin by creating a standard ```<select multiple="multiple">``` list :
 
 ```html
 <select multiple="multiple">
