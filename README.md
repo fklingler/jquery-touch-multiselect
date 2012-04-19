@@ -54,3 +54,15 @@ $('select').touchMultiSelect({
   permitNoSelectedButton: true
 });
 ```
+
+
+Information
+-----------
+
+This plugin has been made as a part of my work at [Novelys](https://github.com/novelys).
+
+
+License
+-------
+
+MIT License. Copyright 2012 Novelys.
