@@ -99,14 +99,9 @@
     };
 
     /*
-     * Plugin initialization
+     * Function used by init and update to create the lis
      */
-    var init = function() {
-      element.hide();
-
-      _ul = $('<ul />').addClass('touchMultiSelect').bind('click.touchMultiSelect', ulClickHandler);
-
-
+    var createLis = function() {
       var li;
       var hasOneSelected = false;
       element.children('option').each(function() {
@@ -136,11 +131,40 @@
       }
 
       _lis = _ul.children('li').not(_noneButton);
-      
+    }
+
+    /******************/
+    /* PUBLIC METHODS */
+    /******************/
+
+    /*
+     * Plugin initialization
+     */
+    this.init = function() {
+      element.hide();
+
+      _ul = $('<ul />').addClass('touchMultiSelect').bind('click.touchMultiSelect', ulClickHandler);
+
+      createLis();
+
       _ul.insertAfter(element);
     };
 
-    init();
+    /*
+     * Plugin update
+     */
+    this.update = function() {
+      _ul.empty();
+
+      createLis();
+    };
+
+    /*
+     * Plugin destroy
+     */
+    this.destroy = function() {
+      _ul.remove();
+    };
   };
 
   $.fn.touchMultiSelect = function(options) {
@@ -148,10 +172,20 @@
       var element = $(this);
       
       // Return early if this element already has a plugin instance
-      if (element.data('touchMultiSelect')) return;
+      if (element.data('touchMultiSelect')) {
+        if (options.destroy) {
+          element.data('touchMultiSelect').destroy();
+        } else {
+          if (options.update) {
+            element.data('touchMultiSelect').update();
+          }
+          return;
+        }
+      }
 
       // pass options to plugin constructor
       var touchMultiSelect = new TouchMultiSelect(element, options);
+      touchMultiSelect.init();
 
       // Store plugin object in this element's data
       element.data('touchMultiSelect', touchMultiSelect);
