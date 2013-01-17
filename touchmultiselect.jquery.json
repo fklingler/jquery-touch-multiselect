@@ -1,0 +1,29 @@
+{
+  "name": "touchmultiselect",
+  "version": "1.0.0",
+  "title": "jQuery Touch Multiselect",
+  "description": "jQuery plugin to have a touch-fitted multi select input field.",
+  "keywords": [
+    "touch",
+    "select",
+    "multiselect",
+    "input"
+  ],
+  "author": {
+    "name": "François Klingler",
+    "email": "contact@fklingler.com",
+    "url": "http://fklingler.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/fklingler/jquery-touch-multiselect/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "http://fklingler.github.com/jquery-touch-multiselect/",
+  "bugs": "https://github.com/fklingler/jquery-touch-multiselect/issues",
+  "docs": "http://fklingler.github.com/jquery-touch-multiselect/",
+  "dependencies": {
+    "jquery": ">=1.5"
+  }
+}
