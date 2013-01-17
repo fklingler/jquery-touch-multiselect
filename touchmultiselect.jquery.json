@@ -22,7 +22,7 @@
   ],
   "homepage": "http://fklingler.github.com/jquery-touch-multiselect/",
   "bugs": "https://github.com/fklingler/jquery-touch-multiselect/issues",
-  "docs": "https://fklingler.github.com/jquery-touch-multiselect/",
+  "docs": "http://fklingler.github.com/jquery-touch-multiselect/",
   "dependencies": {
     "jquery": ">=1.5"
   }
