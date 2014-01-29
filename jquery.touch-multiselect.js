@@ -18,12 +18,17 @@
       // permitNoSelectedButton : if there is no 'none' button, determines if we can deselect
       // an option if there is no other one selected
       permitNoSelectedButton: false,
+      maximumNumberSelections: null,
     };
 
     var options = $.extend(defaults, options);
 
-    var _ul, _lis, _noneButton;
-
+      var _ul, 
+            _lis, 
+            _noneButton, 
+            _maxSelections = options['maximumNumberSelections'], 
+            _numSelected = 0;
+    
     /*
      * Function that returns the currently selected <li>
      */
@@ -65,13 +70,15 @@
             _noneButton.addClass('selected');
           }
         }
-      } else {
+        _numSelected--;
+      } else if ((_maxSelections == null) | (_numSelected < _maxSelections)) {
         li.addClass('selected');
         updateSelectOption(li);
 
         if (_noneButton) {
           _noneButton.removeClass('selected');
         }
+        _numSelected++;
       }
       event.stopPropagation();
     };
