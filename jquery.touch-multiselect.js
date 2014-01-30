@@ -60,7 +60,6 @@
      */
     var liClickHandler = function(event) {
       li = $(this);
-
       if (li.hasClass('selected')) {
         if (!(filterSelectedLis().length == 1 && !_noneButton && !options['permitNoSelectedButton'])) {
           li.removeClass('selected');
@@ -140,6 +139,8 @@
       }
 
       _lis = _ul.children('li').not(_noneButton);
+      
+      _numSelected = filterSelectedLis().length;
     }
 
     /******************/
