@@ -27,7 +27,7 @@
             _lis, 
             _noneButton, 
             _maxSelections = options['maximumNumberSelections'], 
-            _numSelected = 0;
+            _numSelected;
     
     /*
      * Function that returns the currently selected <li>
@@ -91,6 +91,8 @@
         selectedLis = filterSelectedLis();
         selectedLis.removeClass('selected');
 
+        _numSelected = 0;
+        
         _noneButton.addClass('selected');
 
         updateSelectOption(selectedLis);
@@ -153,6 +155,8 @@
       _ul = $('<ul />').addClass('touchMultiSelect').bind('click.touchMultiSelect', ulClickHandler);
 
       createLis();
+
+      _numSelected = filterSelectedLis().length;
 
       _ul.insertAfter(element);
     };
