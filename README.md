@@ -45,6 +45,10 @@ _default value : true_
 If there is no 'none' button, determines if we can deselect an option if there is no other selected option  
 _default value : false_
 
+- __maximumNumberSelections__  
+Limits how many options can be selected; default is no limitation (null)  
+_default value : null_  
+
 
 ### Example
 
